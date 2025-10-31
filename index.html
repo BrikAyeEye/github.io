@@ -35,13 +35,19 @@
         }
 
         header {
-            text-align: center;
+            text-align: left;
         }
 
         header h1 {
             font-weight: 400;
             font-size: 2rem;
             letter-spacing: 0.1em;
+            position: relative;
+        }
+
+        header h1::before {
+            content: "FIELD ";
+            visibility: hidden;
         }
 
         main {
@@ -56,6 +62,29 @@
 
         section p {
             font-weight: 300;
+            position: relative;
+            padding-left: 0;
+        }
+
+        .label {
+            display: inline-block;
+        }
+
+        .description {
+            display: inline;
+            margin-left: 0.5rem;
+        }
+
+        .arrow-container {
+            position: absolute;
+            left: 0;
+            width: 8.5rem;
+            text-align: right;
+            white-space: nowrap;
+        }
+
+        .arrow-container ~ a {
+            margin-left: 9rem;
         }
 
         .label {
@@ -98,35 +127,40 @@
         <main>
             <section>
                 <p>
-                    <span class="label">FIELD</span> — post-analog → 
+                    <span class="arrow-container">→</span>
+                    <span class="label">FIELD</span><span class="description">— post-analog</span>
                     <a href="https://www.instagram.com/bndindony/" class="link">instagram.com/bndindony</a>
                 </p>
             </section>
             
             <section>
                 <p>
-                    <span class="label">IMAGE</span> — easy on the lipstick, starling → 
+                    <span class="arrow-container">→</span>
+                    <span class="label">IMAGE</span><span class="description">— easy on the lipstick, starling</span>
                     <a href="https://www.pinterest.com/sebastian_tellmann/" class="link">pinterest.com/sebastian_tellmann</a>
                 </p>
             </section>
             
             <section>
                 <p>
-                    <span class="label">PLAY</span> — do you want brain with that? → 
+                    <span class="arrow-container">→</span>
+                    <span class="label">PLAY</span><span class="description">— do you want brain with that?</span>
                     <a href="https://brikayeeye.github.io/games/" class="link">brikayeeye.github.io/games</a>
                 </p>
             </section>
             
             <section>
                 <p>
-                    <span class="label">SUPPORT A STARVING ARTIST</span> → 
+                    <span class="arrow-container">→</span>
+                    <span class="label">SUPPORT A STARVING ARTIST</span>
                     <a href="https://www.etsy.com/shop/gothicarising/?etsrc=sdt" class="link">etsy.com/shop/gothicarising</a>
                 </p>
             </section>
             
             <section>
                 <p>
-                    <span class="label">WORD</span> — Writing / Essays (reflection) → 
+                    <span class="arrow-container">→</span>
+                    <span class="label">WORD</span>
                     <a href="https://medium.com/@bk_89765" class="link">medium.com/@bk_89765</a>
                 </p>
             </section>
