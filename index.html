@@ -18,94 +18,112 @@
             font-family: 'Space Grotesk', sans-serif;
             background-color: #000;
             color: #fff;
-            line-height: 1.8;
+            line-height: 1.6;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: relative;
+            padding: 3rem;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 800px;
             width: 100%;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
+            height: 100vh;
+            position: relative;
         }
 
         header {
-            text-align: left;
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         header h1 {
             font-weight: 400;
             font-size: 2rem;
             letter-spacing: 0.1em;
-            position: relative;
-        }
-
-        header h1::before {
-            content: "FIELD ";
-            visibility: hidden;
         }
 
         main {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            width: 100%;
+            height: 100%;
+            position: relative;
         }
 
         section {
-            font-size: 1rem;
-        }
-
-        section p {
-            font-weight: 300;
-            position: relative;
-            padding-left: 0;
-        }
-
-        .label {
-            display: inline-block;
-        }
-
-        .description {
-            display: inline;
-            margin-left: 0.5rem;
-        }
-
-        .arrow-container {
             position: absolute;
-            left: 0;
-            width: 8.5rem;
-            text-align: right;
-            white-space: nowrap;
-        }
-
-        .arrow-container ~ a {
-            margin-left: 9rem;
+            font-size: 1rem;
+            font-weight: 300;
         }
 
         .label {
             font-weight: 500;
             letter-spacing: 0.05em;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .description {
+            display: block;
+            margin-top: 0.3rem;
+            font-weight: 300;
         }
 
         .link {
+            display: block;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
             color: #fff;
             text-decoration: none;
             transition: color 0.2s ease;
+            opacity: 0.8;
         }
 
         .link:hover {
             color: #aaa;
+            opacity: 1;
         }
 
+        section:nth-child(1) {
+            top: 20%;
+            left: 10%;
+        }
+
+        section:nth-child(2) {
+            top: 35%;
+            right: 15%;
+        }
+
+        section:nth-child(3) {
+            top: 50%;
+            left: 20%;
+        }
+
+        section:nth-child(4) {
+            bottom: 30%;
+            right: 20%;
+        }
+
+        section:nth-child(5) {
+            bottom: 40%;
+            left: 15%;
+        }
+
+        section:nth-child(6) {
+            top: 60%;
+            right: 10%;
+        }
+
+        section:nth-child(7) {
+            bottom: 15%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
         @media (max-width: 600px) {
-            .container {
-                padding: 1.5rem;
-                gap: 1.5rem;
+            body {
+                padding: 2rem 1rem;
             }
             
             header h1 {
@@ -114,6 +132,18 @@
             
             section {
                 font-size: 0.9rem;
+                position: relative;
+                top: auto;
+                left: auto;
+                right: auto;
+                bottom: auto;
+                transform: none;
+                margin-bottom: 2rem;
+            }
+            
+            main {
+                position: relative;
+                height: auto;
             }
         }
     </style>
@@ -126,55 +156,41 @@
         
         <main>
             <section>
-                <p>
-                    <span class="arrow-container">→</span>
-                    <span class="label">FIELD</span><span class="description">— post-analog</span>
-                    <a href="https://www.instagram.com/bndindony/" class="link">instagram.com/bndindony</a>
-                </p>
+                <span class="label">FIELD</span>
+                <span class="description">post analog</span>
+                <a href="https://www.instagram.com/bndindony/" class="link">instagram.com/bndindony</a>
             </section>
             
             <section>
-                <p>
-                    <span class="arrow-container">→</span>
-                    <span class="label">IMAGE</span><span class="description">— easy on the lipstick, starling</span>
-                    <a href="https://www.pinterest.com/sebastian_tellmann/" class="link">pinterest.com/sebastian_tellmann</a>
-                </p>
+                <span class="label">IMAGE</span>
+                <span class="description">easy on the lipstick, starling</span>
+                <a href="https://www.pinterest.com/sebastian_tellmann/" class="link">pinterest.com/sebastian_tellmann</a>
             </section>
             
             <section>
-                <p>
-                    <span class="arrow-container">→</span>
-                    <span class="label">PLAY</span><span class="description">— do you want brain with that?</span>
-                    <a href="https://brikayeeye.github.io/games/" class="link">brikayeeye.github.io/games</a>
-                </p>
+                <span class="label">PLAY</span>
+                <span class="description">do you want brain with that?</span>
+                <a href="https://brikayeeye.github.io/games/" class="link">brikayeeye.github.io/games</a>
             </section>
             
             <section>
-                <p>
-                    <span class="arrow-container">→</span>
-                    <span class="label">SUPPORT A STARVING ARTIST</span>
-                    <a href="https://www.etsy.com/shop/gothicarising/?etsrc=sdt" class="link">etsy.com/shop/gothicarising</a>
-                </p>
+                <span class="label">SUPPORT A STARVING ARTIST</span>
+                <a href="https://www.etsy.com/shop/gothicarising/?etsrc=sdt" class="link">etsy.com/shop/gothicarising</a>
             </section>
             
             <section>
-                <p>
-                    <span class="arrow-container">→</span>
-                    <span class="label">WORD</span>
-                    <a href="https://medium.com/@bk_89765" class="link">medium.com/@bk_89765</a>
-                </p>
+                <span class="label">WORD</span>
+                <a href="https://medium.com/@bk_89765" class="link">medium.com/@bk_89765</a>
             </section>
             
             <section>
-                <p>
-                    <span class="label">COLAB</span> — feel smth? reach out..
-                </p>
+                <span class="label">COLAB</span>
+                <span class="description">feel smth? reach out..</span>
             </section>
             
             <section>
-                <p>
-                    <span class="label">ABOUT</span> — you tell me
-                </p>
+                <span class="label">ABOUT</span>
+                <span class="description">you tell me</span>
             </section>
         </main>
     </div>
