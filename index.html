@@ -31,19 +31,6 @@
             position: relative;
         }
 
-        header {
-            position: absolute;
-            top: 5%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        header h1 {
-            font-weight: 400;
-            font-size: 2rem;
-            letter-spacing: 0.1em;
-        }
-
         main {
             width: 100%;
             height: 100%;
@@ -59,6 +46,12 @@
             align-items: baseline;
             gap: 0.5rem;
             flex-wrap: wrap;
+        }
+
+        .header-title {
+            font-weight: 400;
+            font-size: 2rem;
+            letter-spacing: 0.1em;
         }
 
         .label {
@@ -87,39 +80,43 @@
         }
 
         section:nth-child(1) {
-            top: 18%;
-            left: 8%;
-        }
-
-        section:nth-child(2) {
-            top: 32%;
-            right: 12%;
-        }
-
-        section:nth-child(3) {
-            top: 48%;
+            top: 22%;
             left: 15%;
         }
 
-        section:nth-child(4) {
-            bottom: 28%;
-            right: 18%;
+        section:nth-child(2) {
+            top: 35%;
+            right: 10%;
         }
 
-        section:nth-child(5) {
-            bottom: 38%;
+        section:nth-child(3) {
+            top: 50%;
             left: 12%;
         }
 
+        section:nth-child(4) {
+            bottom: 30%;
+            right: 15%;
+        }
+
+        section:nth-child(5) {
+            bottom: 40%;
+            left: 18%;
+        }
+
         section:nth-child(6) {
-            top: 58%;
-            right: 8%;
+            top: 62%;
+            right: 12%;
         }
 
         section:nth-child(7) {
-            bottom: 12%;
-            left: 45%;
-            transform: translateX(-50%);
+            bottom: 15%;
+            left: 25%;
+        }
+
+        section:nth-child(8) {
+            top: 12%;
+            right: 20%;
         }
 
 
@@ -128,7 +125,7 @@
                 padding: 2rem 1rem;
             }
             
-            header h1 {
+            .header-title {
                 font-size: 1.5rem;
             }
             
@@ -152,32 +149,28 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>FIELD STUDIO</h1>
-        </header>
-        
         <main>
             <section>
-                <span class="label">FIELD</span>
                 <span class="description">post analog</span>
                 <a href="https://www.instagram.com/bndindony/" class="link">instagram.com/bndindony</a>
+                <span class="label">FIELD</span>
             </section>
             
             <section>
+                <a href="https://www.pinterest.com/sebastian_tellmann/" class="link">pinterest.com/sebastian_tellmann</a>
                 <span class="label">IMAGE</span>
                 <span class="description">easy on the lipstick, starling</span>
-                <a href="https://www.pinterest.com/sebastian_tellmann/" class="link">pinterest.com/sebastian_tellmann</a>
             </section>
             
             <section>
                 <span class="label">PLAY</span>
-                <span class="description">do you want brain with that?</span>
                 <a href="https://brikayeeye.github.io/games/" class="link">brikayeeye.github.io/games</a>
+                <span class="description">do you want brain with that?</span>
             </section>
             
             <section>
-                <span class="label">SUPPORT A STARVING ARTIST</span>
                 <a href="https://www.etsy.com/shop/gothicarising/?etsrc=sdt" class="link">etsy.com/shop/gothicarising</a>
+                <span class="label">SUPPORT A STARVING ARTIST</span>
             </section>
             
             <section>
@@ -186,13 +179,17 @@
             </section>
             
             <section>
-                <span class="label">COLAB</span>
                 <span class="description">feel smth? reach out..</span>
+                <span class="label">COLAB</span>
             </section>
             
             <section>
                 <span class="label">ABOUT</span>
                 <span class="description">you tell me</span>
+            </section>
+            
+            <section>
+                <span class="header-title">FIELD STUDIO</span>
             </section>
         </main>
     </div>
